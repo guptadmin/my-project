@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel ="stylesheet" href = "salaryhtml1.css">
+      <script type="text/javascript" >
+
+       function salary_calculate(){
+          
+          bs = eval(document.getElementById("basic").value);
+          hra = (bs*30)/100;
+          document.getElementById("h").innerText = document.getElementById("h").innerText + hra;
+          da = (bs*10)/100;
+          document.getElementById("d").innerText = document.getElementById("d").innerText + da;
+          ta = (bs*5)/100;
+          document.getElementById("t").innerText = document.getElementById("t").innerText + ta;
+          pf = (bs*20)/100;
+          document.getElementById("p").innerText = document.getElementById("p").innerText + pf;
+          tax = (bs*18)/100;  
+          document.getElementById("x").innerText = document.getElementById("x").innerText + tax;
+
+          gs = bs +hra+da+ta+pf+tax;
+          document.getElementById("g").innerText = document.getElementById("g").innerText + gs;
+          ns = gs-pf-tax;
+          document.getElementById("n").innerText = document.getElementById("n").innerText+ ns;
+
+          } 
+      </script>
+</head>
+<body>
+ basic salary:
+ <input type="number" id="basic">
+ <button type="submit" onclick="salary_calculate()">calculate</button>
+ <div class="design">
+
+<div class="row" id="h">HRA is:</div>
+<div class="row" id="d">DA is:</div>
+<div class="row" id="t">TA is:</div>
+<div class="row" id="p">PF is:</div>
+<div class="row" id="x">TAX is:</div>
+<div class="row" id="g">GS is:</div>
+<div class="row" id="n">NS is:</div>
+</div>
+
+  </body>
+  </html>
+
