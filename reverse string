@@ -1,0 +1,23 @@
+
+<html>
+<head>
+  <script type="text/javascript">
+    function reverse(str){
+      let newstring="";
+      const len=str.length;
+      for(let i=(len-1);i>=0;i--){
+        newstring = newstring + str[i];
+    }
+    return(newstring);
+  }
+  </script>
+</head>
+<body>
+
+  <script>
+var string1=prompt("Enter The String");
+var ans =reverse(string1);
+document.write(ans);
+  </script>
+</body>
+</html>
